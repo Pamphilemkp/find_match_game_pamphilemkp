@@ -1,0 +1,53 @@
+
+body{
+   
+    padding: 0px;
+    margin: 0px;
+    
+    text-align:center;
+}
+#grid{
+    display: inline-grid;
+   grid-template-columns: 100px 100px 100px 100px;
+    width: 100px;
+    height: 100px;
+    grid-column-gap: 50px;
+    grid-row-gap: 30px;
+    margin-left: -400px;
+
+    
+}
+a{
+   text-decoration:none;
+}
+h2 {
+    font-family: Lobster;
+}
+h1{
+    font-family: "Sofia", sans-serif;
+    font-size: 30px;
+    text-shadow: 3px 3px 3px #ababab;
+  }
+  #back{
+    margin-right: 1000px;
+    margin-top: 30px;
+
+  }
+  
+  button {
+    background-color: #4d0039; 
+    border: none;
+    color: white;
+    padding: 10px 16px;
+    border-radius:10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  #retry{
+      margin-right:50px;
+  }
