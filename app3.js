@@ -129,7 +129,7 @@ else if(cardClicked[0] === cardClicked[1]){
         //win text modified
         win.innerHTML = ` Congratulations 🤩👏🥳🙌 <br/> <br/> 
         <img src='images/congratulation.jfif' alt="you win" >
-        <br/> <br/> 
+        <br/>  <br/> 
        <p> this is the end of the game if you have any suggestions on how i could  improve and perform this game,
          please let me know,i would love to hear your  suggestions and they are very welcome!
          <br/> <br/> <span style="font-family: monospace;"> Pamphile mkp <br/>     
