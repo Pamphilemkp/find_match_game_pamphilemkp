@@ -4,6 +4,13 @@
  const score = document.querySelector('#result')
  const win = document.querySelector('#win')
  const retry = document.querySelector('#retry')
+ //new added s
+ const phone = document.querySelector(".phone")
+ const level = document.querySelector("#level")
+ const paragraph = document.querySelector("#paragraph")
+ const legend = document.querySelector("#status")
+
+ //new added 
  let cardClicked =[];
  let cardClickedid = [];
  const matchResult =[];
@@ -95,11 +102,21 @@ let view = document.querySelectorAll("img")
     
 
 if(idone === idtwo){
-    alert("you have clicked the same image 😀 😃, try to find it match")
+    //deleted
+    /*alert("you have clicked the same image 😀 😃, try to find its match")*/
+
+    //new added s
+    legend.textContent ="you have clicked the same image 😀 😃, try to find it match"
+    //new added
     view[idone].setAttribute('src','images/blank.jfif')
 }
 else if(cardClicked[0] === cardClicked[1]){
-    alert('well played 🥲 ☺️ 😊, try to find more matches and win the game')
+      // deleted
+       /*alert('well played 🥲 ☺️ 😊, try to find more matches and win the game')*/
+    
+    //new added s
+    legend.textContent ='well played 🥲 ☺️ 😊, try to find more matches and win the game'
+    //new added
     view[idone].setAttribute('src','images/white.png')
     view[idone].removeEventListener("click",flip)
     view[idtwo].setAttribute('src','images/white.png')
@@ -109,20 +126,34 @@ else if(cardClicked[0] === cardClicked[1]){
     score.textContent = matchResult.length;
 
     if(matchResult.length === (cards.length)/2){
+        //win text modified
         win.innerHTML = ` Congratulations 🤩👏🥳🙌 <br/> <br/> 
         <img src='images/congratulation.jfif' alt="you win" >
         <br/> <br/> 
-       <p> this is the end of the game if you have any suggestions on how icould <br/>  improve and perform this game,
-         please let me know,<br/>  i would love to hear your  suggestions and they are very welcome!
+       <p> this is the end of the game if you have any suggestions on how i could  improve and perform this game,
+         please let me know,i would love to hear your  suggestions and they are very welcome!
          <br/> <br/> <span style="font-family: monospace;"> Pamphile mkp</span>
          </p>`
         const refresher = document.createElement("button")
-        const text1 = document.createTextNode("Replay")
+        const text1 = document.createTextNode("🔁Replay")
         refresher.setAttribute("id","button")
         refresher.setAttribute("style","margin-top:-50px;")
         refresher.addEventListener("click",reloadpage)
         refresher.appendChild(text1);
         retry.appendChild(refresher);
+
+       
+        //new added s
+        const phoneback = document.createElement("button")
+        const textphone = document.createTextNode("⏪back")
+        phoneback.setAttribute("id","phoneback")
+        phoneback.setAttribute("style","margin-top:-95px;")
+        phoneback.appendChild(textphone);
+        phone.appendChild(phoneback);
+        level.textContent="";
+        legend.textContent ="";
+        paragraph.textContent ="";
+        //new added 
         function reloadpage(){
             location.reload()
         }
@@ -133,7 +164,12 @@ else if(cardClicked[0] === cardClicked[1]){
 }
 
 else{
-    alert("sorry those images don't match 🥺 😢, try to find their matches")
+    //deleted
+   /* alert("sorry those images don't match 🥺 😢, try to find their matches")*/
+
+    //new added s
+    legend.textContent ="sorry those images don't match 🥺 😢, try to find their matches"
+    //new added
     view[idone].setAttribute('src','images/blank.jfif')
     view[idtwo].setAttribute('src','images/blank.jfif')
 }

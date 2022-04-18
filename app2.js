@@ -4,6 +4,13 @@
  const score = document.querySelector('#result')
  const win = document.querySelector('#win')
  const retry = document.querySelector('#retry')
+   //new added s
+ const phone = document.querySelector(".phone")
+ const level = document.querySelector("#level")
+ const paragraph = document.querySelector("#paragraph")
+ const legend = document.querySelector("#status")
+  
+   //new added 
  let cardClicked =[];
  let cardClickedid = [];
  const matchResult =[];
@@ -94,11 +101,21 @@ let view = document.querySelectorAll("img")
     
 
 if(idone === idtwo){
-    alert("you have clicked the same image 😀 😃, try to find it match")
+        //deleted
+    /*alert("you have clicked the same image 😀 😃, try to find the match")*/
+
+    //new added s
+    legend.textContent ="you have clicked the same image 😀 😃, try to find it match"
+    //new added
     view[idone].setAttribute('src','images/blank.jfif')
 }
 else if(cardClicked[0] === cardClicked[1]){
-    alert('well played 🥲 ☺️ 😊, try to find more matches and win the game')
+        // deleted
+       /*alert('well played 🥲 ☺️ 😊, try to find more matches and win the game')*/
+    
+    //new added s
+    legend.textContent ='well played 🥲 ☺️ 😊, try to find more matches and win the game'
+    //new added
     view[idone].setAttribute('src','images/white.png')
     view[idone].removeEventListener("click",flip)
     view[idtwo].setAttribute('src','images/white.png')
@@ -111,7 +128,7 @@ else if(cardClicked[0] === cardClicked[1]){
         win.innerHTML = ` Congratulations 🤩👏🥳🙌 <br/> <br/> <br/> 
         <img src='images/congratulation.jfif' alt="you win" >`
         const next = document.createElement("button")
-        const text = document.createTextNode("Level 4 :  👉 next")
+        const text = document.createTextNode("⏩next")
         next.setAttribute("id","button")
         next.setAttribute("style","margin-bottom:-55px;")
         next.appendChild(text);
@@ -125,6 +142,15 @@ else if(cardClicked[0] === cardClicked[1]){
         refresher.addEventListener("click",reloadpage)
         refresher.appendChild(text1);
         retry.appendChild(refresher);
+
+
+                //new added s
+
+        level.textContent="";
+        legend.textContent ="";
+        paragraph.textContent ="";
+                //new added 
+
         function reloadpage(){
             location.reload()
         }
@@ -134,7 +160,12 @@ else if(cardClicked[0] === cardClicked[1]){
 }
 
 else{
-    alert("sorry those images don't match 🥺 😢, try to find their matches")
+      //deleted
+   /* alert("sorry those images don't match 🥺 😢, try to find their matches")*/
+
+    //new added s
+    legend.textContent ="sorry those images don't match 🥺 😢, try to find their matches"
+    //new added
     view[idone].setAttribute('src','images/blank.jfif')
     view[idtwo].setAttribute('src','images/blank.jfif')
 }
