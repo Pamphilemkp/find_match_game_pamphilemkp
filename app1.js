@@ -102,19 +102,19 @@ let view = document.querySelectorAll("img")
 
 if(idone === idtwo){
     //deleted
-    /*alert("you have clicked the same image 😀 😃, try to find its match")*/
+    /*alert("You have clicked on the same image 😀 😃, try to find another one that  matches it")*/
 
     //new added s
-    legend.textContent ="you have clicked the same image 😀 😃, try to find it match"
+    legend.textContent ="You have clicked on the same image 😀 😃, try to find another one that  matches it"
     //new added
     view[idone].setAttribute('src','images/blank.jfif')
 }
 else if(cardClicked[0] === cardClicked[1]){
     // deleted
-       /*alert('well played 🥲 ☺️ 😊, try to find more matches and win the game')*/
+       /*alert('Well played 😊😇😉, try to find more matches and win the game')*/
     
     //new added s
-    legend.textContent ='well played 🥲 ☺️ 😊, try to find more matches and win the game'
+    legend.textContent ='Well played 😊😇😉, try to find more matches and win the game'
     //new added
     view[idone].setAttribute('src','images/white.png')
     view[idone].removeEventListener("click",flip)
@@ -161,10 +161,10 @@ else if(cardClicked[0] === cardClicked[1]){
 
 else{
       //deleted
-   /* alert("sorry those images don't match 🥺 😢, try to find their matches")*/
+   /* alert("Sorry those images don't match 🥺 😢, try to find their matches")*/
 
     //new added s
-    legend.textContent ="sorry those images don't match 🥺 😢, try to find their matches"
+    legend.textContent ="Sorry those images don't match 🥺 😢, try to find their matches"
     //new added
     view[idone].setAttribute('src','images/blank.jfif')
     view[idtwo].setAttribute('src','images/blank.jfif')

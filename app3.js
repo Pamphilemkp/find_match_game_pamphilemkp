@@ -103,19 +103,19 @@ let view = document.querySelectorAll("img")
 
 if(idone === idtwo){
     //deleted
-    /*alert("you have clicked the same image 😀 😃, try to find its match")*/
+    /*alert("you have clicked on the same image 😀 😃, try to find another one that  matches it")*/
 
     //new added s
-    legend.textContent ="you have clicked the same image 😀 😃, try to find it match"
+    legend.textContent ="You have clicked on the same image 😀 😃, try to find another one that  matches it"
     //new added
     view[idone].setAttribute('src','images/blank.jfif')
 }
 else if(cardClicked[0] === cardClicked[1]){
       // deleted
-       /*alert('well played 🥲 ☺️ 😊, try to find more matches and win the game')*/
+       /*alert('Well played 😊😇😉, try to find more matches and win the game')*/
     
     //new added s
-    legend.textContent ='well played 🥲 ☺️ 😊, try to find more matches and win the game'
+    legend.textContent ='Well played 😊😇😉, try to find more matches and win the game'
     //new added
     view[idone].setAttribute('src','images/white.png')
     view[idone].removeEventListener("click",flip)
@@ -132,8 +132,10 @@ else if(cardClicked[0] === cardClicked[1]){
         <br/> <br/> 
        <p> this is the end of the game if you have any suggestions on how i could  improve and perform this game,
          please let me know,i would love to hear your  suggestions and they are very welcome!
-         <br/> <br/> <span style="font-family: monospace;"> Pamphile mkp</span>
-         </p>`
+         <br/> <br/> <span style="font-family: monospace;"> Pamphile mkp <br/>     
+         To contact me 📞📳 click on this whatsapp icon 👉 <a href="https://wa.me/+905338829657"> <img src="images/whatsapp.png" width="30px" height="30px"></a></span>
+         </p>
+         <p style="font-family: FreeMono,monospace;">&copy;copyright 2022 by Pamphile mkp</p>`
         const refresher = document.createElement("button")
         const text1 = document.createTextNode("🔁Replay")
         refresher.setAttribute("id","button")
@@ -165,10 +167,10 @@ else if(cardClicked[0] === cardClicked[1]){
 
 else{
     //deleted
-   /* alert("sorry those images don't match 🥺 😢, try to find their matches")*/
+   /* alert("Sorry those images don't match 🥺 😢, try to find their matches")*/
 
     //new added s
-    legend.textContent ="sorry those images don't match 🥺 😢, try to find their matches"
+    legend.textContent ="Sorry those images don't match 🥺 😢, try to find their matches"
     //new added
     view[idone].setAttribute('src','images/blank.jfif')
     view[idtwo].setAttribute('src','images/blank.jfif')
